@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-hand: 'Caveat', cursive;
+  
+  --color-canvas: #FAF7F2;
+  --color-ink: #3D2E24;
+  --color-ink-muted: #7A695C;
+  --color-cream-card: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #3D2E24;
+  @apply dark:bg-[#1A1A1A] dark:text-[#F3F3F3] transition-colors duration-200;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+  @apply dark:bg-[#1A1A1A];
+}
+::-webkit-scrollbar-thumb {
+  background: #E6DDD4;
+  border-radius: 9999px;
+  @apply dark:bg-[#333333];
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4C7BA;
+  @apply dark:bg-[#444444];
+}
+
+
+/* Dark mode styling root */
+html.dark,
+html.dark body {
+  background-color: #1A1318 !important;
+  color: #F8ECEE !important;
+}
+
+/* Dark mode override classes */
+html.dark .bg-white {
+  background-color: #261B22 !important;
+  color: #F8ECEE !important;
+}
+
+html.dark .bg-white\/80,
+html.dark .bg-white\/90,
+html.dark .bg-white\/70,
+html.dark .bg-white\/60,
+html.dark .bg-white\/50 {
+  background-color: #2D2128 !important;
+  color: #F8ECEE;
+}
+
+html.dark .bg-\[\#FAF7F2\],
+html.dark .bg-\[\#FAF6F0\],
+html.dark .bg-\[\#F4EFE6\]\/70,
+html.dark .bg-\[\#F4EFE6\],
+html.dark .bg-\[\#F5F2EC\],
+html.dark .bg-\[\#F6F2EC\],
+html.dark .bg-\[\#F3ECE1\],
+html.dark .bg-\[\#F1EAE0\]\/80 {
+  background-color: #251B21 !important;
+  color: #EAD8DC !important;
+}
+
+html.dark .text-\[\#2E2118\],
+html.dark .text-\[\#2B1F17\],
+html.dark .text-\[\#2B2018\],
+html.dark .text-\[\#2A1E16\],
+html.dark .text-\[\#3D2E24\] {
+  color: #F8ECEE !important;
+}
+
+html.dark .text-\[\#6E5D50\],
+html.dark .text-\[\#7A695C\],
+html.dark .text-\[\#6F5F53\],
+html.dark .text-\[\#78675A\],
+html.dark .text-\[\#8C7A6D\],
+html.dark .text-\[\#8A7563\],
+html.dark .text-\[\#7D6B5E\] {
+  color: #CDBAC1 !important;
+}
+
+/* Dark mode cards & gradients */
+html.dark [id^="event-card-"] {
+  background: #251B21 !important;
+  border-color: #3D2B36 !important;
+}
+
+html.dark .bg-gradient-to-br {
+  background-image: none !important;
+  background-color: #261B22 !important;
+  border-color: #3F2C37 !important;
+}
+
+html.dark #hero-upcoming-card {
+  background: #2D1F28 !important;
+  border-color: #4A3341 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1F151B !important;
+  color: #F8ECEE !important;
+  border-color: #4A3341 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #8C7580 !important;
+}
+
+html.dark input[type="date"]::-webkit-calendar-picker-indicator,
+html.dark input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+}
+
+html.dark .border-\[\#EAE2D7\],
+html.dark .border-\[\#E8E0D5\],
+html.dark .border-\[\#E8E0D4\],
+html.dark .border-\[\#E8DFD3\],
+html.dark .border-\[\#EFE8DE\],
+html.dark .border-\[\#D5C6B7\],
+html.dark .border-\[\#D8CEBF\],
+html.dark .border-\[\#E7DFD4\],
+html.dark .border-\[\#E5DDD2\],
+html.dark .border-\[\#EBE3D7\] {
+  border-color: #3F2F38 !important;
+}

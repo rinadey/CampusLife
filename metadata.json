@@ -1,0 +1,6 @@
+{
+  "name": "Personal Life & University Organizer",
+  "description": "A warm, magazine-style visual timeline organizer for university students to effortlessly manage classes, assignments, exams, appointments, and social life.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
